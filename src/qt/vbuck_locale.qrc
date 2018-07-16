@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/vbuck_bg.qm</file>
+        <file alias="ca">locale/vbuck_ca.qm</file>
+        <file alias="cs">locale/vbuck_cs.qm</file>
+        <file alias="da">locale/vbuck_da.qm</file>
+        <file alias="de">locale/vbuck_de.qm</file>
+        <file alias="en">locale/vbuck_en.qm</file>
+        <file alias="en_US">locale/vbuck_en_US.qm</file>
+        <file alias="es">locale/vbuck_es.qm</file>
+        <file alias="fi">locale/vbuck_fi.qm</file>
+        <file alias="fr_FR">locale/vbuck_fr_FR.qm</file>
+        <file alias="it">locale/vbuck_it.qm</file>
+        <file alias="ja">locale/vbuck_ja.qm</file>
+        <file alias="ko_KR">locale/vbuck_ko_KR.qm</file>
+        <file alias="nl">locale/vbuck_nl.qm</file>
+        <file alias="pl">locale/vbuck_pl.qm</file>
+        <file alias="pt">locale/vbuck_pt.qm</file>
+        <file alias="pt_BR">locale/vbuck_pt_BR.qm</file>
+        <file alias="ro_RO">locale/vbuck_ro_RO.qm</file>
+        <file alias="ru">locale/vbuck_ru.qm</file>
+        <file alias="sk">locale/vbuck_sk.qm</file>
+        <file alias="sv">locale/vbuck_sv.qm</file>
+        <file alias="tr">locale/vbuck_tr.qm</file>
+        <file alias="uk">locale/vbuck_uk.qm</file>
+        <file alias="zh_CN">locale/vbuck_zh_CN.qm</file>
+        <file alias="zh_TW">locale/vbuck_zh_TW.qm</file>
+    </qresource>
+</RCC>

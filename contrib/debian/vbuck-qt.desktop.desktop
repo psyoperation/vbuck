@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Vbuck
+Comment=Vbuck P2P Cryptocurrency
+Exec=vbuck-qt %u
+Terminal=false
+Type=Application
+Icon=vbuck128
+MimeType=x-scheme-handler/vbuck;
+Categories=Office;Finance;
+Name[en_US]=vbuck-qt.desktop

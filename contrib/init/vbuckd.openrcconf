@@ -1,0 +1,26 @@
+# /etc/conf.d/vbuckd: config file for /etc/init.d/vbuckd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/vbuck/vbuck.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/vbuckd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/vbuckd.pid"
+
+# Where to write vbuckd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/vbuckd"
+
+# User and group to own vbuckd process
+#BITCOIND_USER="vbuck"
+#BITCOIND_GROUP="vbuck"
+
+# Path to vbuckd executable
+#BITCOIND_BIN="/usr/bin/vbuckd"
+
+# Nice value to run vbuckd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
