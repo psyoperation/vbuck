@@ -203,10 +203,10 @@ QT_TRANSLATE_NOOP("vbuck-core", ""
 QT_TRANSLATE_NOOP("vbuck-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("vbuck-core", "(26992 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("vbuck-core", "(42424 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("vbuck-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("vbuck-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("vbuck-core", "(must be 26992 for mainnet)"),
+QT_TRANSLATE_NOOP("vbuck-core", "(must be 42424 for mainnet)"),
 QT_TRANSLATE_NOOP("vbuck-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("vbuck-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("vbuck-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

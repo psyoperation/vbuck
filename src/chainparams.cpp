@@ -54,7 +54,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x0000049266fc0e3dc18738b7786798e5782281c19775f0dad1ad658af08fe5c8"));
+    (0, uint256("0x00000ce4a1a12861a6a6147d984a11968dae455a9038634795fb8a7e535761e2"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -66,7 +66,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("0x0000049266fc0e3dc18738b7786798e5782281c19775f0dad1ad658af08fe5c8"));
+    (0, uint256("0x00000ce4a1a12861a6a6147d984a11968dae455a9038634795fb8a7e535761e2"));
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
@@ -76,12 +76,12 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    (0, uint256("0x0000049266fc0e3dc18738b7786798e5782281c19775f0dad1ad658af08fe5c8"));
+    (0, uint256("0x00000ce4a1a12861a6a6147d984a11968dae455a9038634795fb8a7e535761e2"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1531136529,
+    0, // (for the regtest network it is necessary to set the parameter value as 0)
     0,
-    1.0};
+    0};
 
 class CMainParams : public CChainParams
 {
@@ -100,8 +100,8 @@ public:
         pchMessageStart[2] = 0x6f;
         pchMessageStart[3] = 0x6d;
         vAlertPubKey = ParseHex("04be832d94d268143add941ae576554cfb5e245f355b7e26746464b6d1b0cdbb1625e12f08ba50896fd2cd3bbdcbf6ef1f731deec1a24ecaa759e2f8162ae48f9e");
-        nDefaultPort = 26992;
-        bnProofOfWorkLimit = ~uint256(0) >> 20;
+        nDefaultPort = 42424;
+        bnProofOfWorkLimit = ~uint256(0) >> 1;
         nSubsidyHalvingInterval = 420000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
@@ -123,27 +123,25 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 30 * COIN;
-<<<<<<< HEAD
+        txNew.vout[0].nValue = 0 * COIN;
+
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("04e45f5b43134518951325294484a402b10b6948fefc5c37c2d3436a2abdc32583c16a8985632a97287e4efeac829f689770d9a0c5f943392d7fc9b9851df9fdd4") << OP_CHECKSIG;
-=======
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
->>>>>>> 64ca01e6bc87ff3b3732bd329c051e6c81744c47
+
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nTime = 1531136529;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 521542;
+        genesis.nNonce = 80333;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000049266fc0e3dc18738b7786798e5782281c19775f0dad1ad658af08fe5c8"));
-        assert(genesis.hashMerkleRoot == uint256("0xadb861885faa258da55162ff252c95a3da276758da30031cf81976dbe7ef0093"));
+        assert(hashGenesisBlock == uint256("0x00000ce4a1a12861a6a6147d984a11968dae455a9038634795fb8a7e535761e2"));
+        assert(genesis.hashMerkleRoot == uint256("0x64b2308c84d7a8b9d1b1cc59f2786ace460a3a9a27c01a56b9bac41e47660597"));
 
         // DNS Seeding
-        vSeeds.push_back(CDNSSeedData("dns.vbuck.co", "dns.vbuck.co"));
-
+        //vSeeds.push_back(CDNSSeedData("dns.vbuck.co", "dns.vbuck.co")); Delete "// and line 144 before run MainNet"
+        vSeeds.clear();
         // Vbuck addresses start with 'V'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 70);
         // Vbuck script addresses start with '3'
@@ -199,7 +197,7 @@ public:
         pchMessageStart[2] = 0x6d;
         pchMessageStart[3] = 0x61;
         vAlertPubKey = ParseHex("04be832d94d268143add941ae576554cfb5e245f355b7e26746464b6d1b0cdbb1625e12f08ba50896fd2cd3bbdcbf6ef1f731deec1a24ecaa759e2f8162ae48f9e");
-        nDefaultPort = 26994;
+        nDefaultPort = 42425;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -210,14 +208,14 @@ public:
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 50000000 * COIN;
+        nMaxMoneyOut = 42000000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1531136539;
-        genesis.nNonce = 521542;
+        genesis.nNonce = 80333;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000049266fc0e3dc18738b7786798e5782281c19775f0dad1ad658af08fe5c8"));
+        assert(hashGenesisBlock == uint256("0x00000ce4a1a12861a6a6147d984a11968dae455a9038634795fb8a7e535761e2"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -244,7 +242,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04178a4dc9c93e0456bc65be19afa5c0d492962fc5386a81561847f3efb1025adf893bc7515647d3aabf84523da27fe17057edcdef90b2ed9676f3dc11b1fc2123";
+        strSporkKey = "04587120802137864f9b828e548f6e32ef8f53b837658ff293a8ba677d338a0e1946651fc94ff2b7625ce20008cb5eeb561c5c62a6a1dc1280b103a4b1d91d4d4b";
         strMasternodePoolDummyAddress = "sbJ4Qad4xc77PpLzMx6rUegAs6aUPWkcUq";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
@@ -280,13 +278,13 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Vbuck: 1 day
         nTargetSpacing = 2 * 60;        // Vbuck: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1531136549;
+        genesis.nTime = 1531136529;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 7;
+        genesis.nNonce = 80333;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 26996;
-        assert(hashGenesisBlock == uint256("0x0000049266fc0e3dc18738b7786798e5782281c19775f0dad1ad658af08fe5c8"));
+        assert(hashGenesisBlock == uint256("0x00000ce4a1a12861a6a6147d984a11968dae455a9038634795fb8a7e535761e2"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
