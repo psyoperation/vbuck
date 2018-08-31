@@ -243,7 +243,7 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "04587120802137864f9b828e548f6e32ef8f53b837658ff293a8ba677d338a0e1946651fc94ff2b7625ce20008cb5eeb561c5c62a6a1dc1280b103a4b1d91d4d4b";
-        strMasternodePoolDummyAddress = "sbJ4Qad4xc77PpLzMx6rUegAs6aUPWkcUq";
+        strMasternodePoolDummyAddress = ""; // original : sbJ4Qad4xc77PpLzMx6rUegAs6aUPWkcUq
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet
@@ -279,7 +279,7 @@ public:
         nTargetSpacing = 2 * 60;        // Vbuck: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1531136529;
-        genesis.nBits = 0x207fffff;
+        genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 80333;
 
         hashGenesisBlock = genesis.GetHash();
