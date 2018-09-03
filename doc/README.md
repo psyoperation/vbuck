@@ -26,7 +26,7 @@ Drag Vbuck-Qt to your applications folder, and then run Vbuck-Qt.
 
 ### Need Help?
 
-* Join our Discord server [Discord Server](https://discord.savebitcoin.io)
+* Join our Discord server [Discord Server](https://discord.gg/WJsbZuE)
 
 Building
 ---------------------
