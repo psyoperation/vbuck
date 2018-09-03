@@ -56,7 +56,7 @@ The Vbuck repo's [root README](https://github.com/vbuck-project/Vbuck/blob/maste
 ### Resources
 
 * Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=Vbuck) .
-* Join the [Vbuck-system-dev] Discord groups [Vbuck Discord Groups](https://discord.gg/pQpBnm).
+* Join the [Vbuck-system-dev] Discord groups [Vbuck Discord Groups](https://discord.gg/WJsbZuE).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
