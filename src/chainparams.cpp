@@ -137,7 +137,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x00000f6b26f56c8bc2b1fb0d467b594af4cc10b8bfe997fd13487cec8ea1f123"));
-        assert(genesis.hashMerkleRoot == uint256("59247b2487a2a096f96964d9ffb336ef32d41793a024b3675a3a6bd8c22fe243"));
+        assert(genesis.hashMerkleRoot == uint256("0x59247b2487a2a096f96964d9ffb336ef32d41793a024b3675a3a6bd8c22fe243"));
 
         // DNS Seeding
         //vSeeds.push_back(CDNSSeedData("dns.vbuck.co", "dns.vbuck.co")); Delete "// and line 144 before run MainNet"

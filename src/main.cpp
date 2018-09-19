@@ -1625,9 +1625,9 @@ int64_t GetBlockValue(int nHeight)
 
     if (nHeight == 0) {
         nSubsidy = 0 * COIN; // Genesis block
-    } else if (nHeight >= 1 && nHeight <= 400) {
-        nSubsidy = 3800 * COIN; // Premine
-    } else if (nHeight >= 401 && nHeight <= 5000) {
+    } else if (nHeight >= 1 && nHeight <= 500) {
+        nSubsidy = 1000 * COIN; // Premine
+    } else if (nHeight >= 501 && nHeight <= 5000) {
         nSubsidy = 1 * COIN; // Launch phase
     } else if (nHeight >= 5001 && nHeight <= 15081) {
         nSubsidy = 45 * COIN;
